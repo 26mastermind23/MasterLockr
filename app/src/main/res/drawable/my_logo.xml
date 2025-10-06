@@ -1,0 +1,17 @@
+<!-- res/drawable/circular_logo.xml -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Circle shape for the background -->
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="#00FFFFFF"/> <!-- Change the color as needed -->
+        </shape>
+    </item>
+
+    <!-- Image for the logo -->
+    <item
+        android:drawable="@drawable/logo"
+        android:gravity="center"
+        />
+
+</layer-list>

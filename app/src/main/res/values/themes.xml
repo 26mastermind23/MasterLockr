@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Base application theme -->
+    <style name="AppTheme" parent="Theme.AppCompat">
+        <!-- Customize your theme attributes -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <!-- Add other customizations if needed -->
+    </style>
+
+    <!-- Your custom theme -->
+    <style name="Theme.MasterLockr" parent="AppTheme">
+        <!-- Add specific customizations for Theme.MasterLockr if needed -->
+    </style>
+
+</resources>

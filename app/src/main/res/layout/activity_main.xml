@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/smallLogo"
+        android:layout_width="220dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/my_logo"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"/>
+
+    <Button
+        android:id="@+id/btnPlus"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:background="@drawable/oval_background"
+        android:text="+"
+        android:textColor="#FFFFFF"
+        android:textSize="36sp"
+        app:layout_constraintTop_toBottomOf="@+id/smallLogo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/tvAddMedia"
+        app:layout_constraintVertical_bias="0.25"/>
+
+    <TextView
+        android:id="@+id/tvAddMedia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:text="Add Media"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/btnPlus"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/stripe"
+        app:layout_constraintVertical_bias="0.1"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp" />
+
+    <View
+        android:id="@+id/stripe"
+        android:layout_width="350dp"
+        android:layout_height="2dp"
+        android:background="#000000"
+        app:layout_constraintTop_toBottomOf="@+id/tvAddMedia"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/tvSetPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Set a price"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/stripe"
+        android:layout_marginTop="50dp"/>
+
+    <EditText
+        android:id="@+id/etPrice"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:background="@drawable/round_button_background"
+        android:gravity="center"
+        android:hint="$0.00"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvSetPrice"
+        android:layout_marginTop="8dp"/>
+
+    <Button
+        android:id="@+id/btnGenerateLink"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:text="Generate Link"
+        android:background="@drawable/plus_button_background"
+        app:layout_constraintTop_toBottomOf="@+id/etPrice"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
+        app:layout_constraintVertical_bias="0.1"/>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_alignParentBottom="true"
+        android:background="#303030"
+        app:itemIconSize="35dp"
+        app:labelVisibilityMode="unlabeled"
+        app:menu="@menu/bottom_navigation_menu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
